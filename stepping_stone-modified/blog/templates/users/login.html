@@ -1,0 +1,25 @@
+{% extends "users/base.html"%}
+{% block content %}
+    <div class="content-section">
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/en/1/13/NYU_Shanghai_Logo.jpg" class="rounded mx-auto d-block" alt="logo" width="200px">
+
+        </div>
+        <div class="align-items-center">
+        <form method="POST"> {% csrf_token %}
+             <fieldset class="form-group">
+                 <legend>
+                     Login to the NYU Shanghai Stepping Stone!
+                 </legend>
+                 {{form.as_p}}
+             </fieldset>
+             <div class="form-group">
+                 <button type="submit" class="btn btn-primary">
+                    Login
+                 </button>
+                </div>
+             </div>
+        </form>
+
+    </div>
+{% endblock %}
